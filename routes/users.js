@@ -23,8 +23,8 @@ router.put('/:id', (req, res, next) => {
   const data = req.body
 })
 
-router.remove('/:id', (req, res, next) => {
-  // Consulta com Model.remove()
+router.delete('/:id', (req, res, next) => {
+  // Consulta com Model.delete()
   const id = req.params.id
 })
 
