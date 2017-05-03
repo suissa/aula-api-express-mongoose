@@ -1,13 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+require('./../db/config');
+const mongoose = require('mongoose');
+const router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function (req, res, next) {
+  res.render('index', { title: 'Expresso' });
 });
 
 /* GET Pagina Suissa. */
-router.get('/suissa', function(req, res, next) {
+router.get('/suissa', function (req, res, next) {
   res.render('suissa', { title: 'Suissamon', suissa: 'Vamo que vamooooo' });
 });
 

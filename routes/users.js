@@ -1,9 +1,12 @@
 const express = require('express')
+const mongoose = require('mongoose');
 const router = express.Router()
+
+const Schema = mongoose.Schema;
 
 const Model = require('./model')
 
-router.post('/', (req, res, next) => {
+router.post('/:', (req, res, next) => {
   // Listagem com Model.create()
   const data = req.body
 })

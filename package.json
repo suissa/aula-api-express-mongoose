@@ -1,6 +1,6 @@
 {
-  "name": "suissa-express",
-  "version": "0.0.1",
+  "name": "teste-express",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
