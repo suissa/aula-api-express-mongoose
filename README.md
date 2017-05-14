@@ -15,7 +15,7 @@ Mongoose provides a straight-forward, schema-based solution to model your applic
 Arquivo config.js
 
 
-<!--const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const dbUrl = 'mongodb://henriqueferraz:lai7452@ds127101.mlab.com:27101/ofnet';
 
 mongoose.connect(dbUrl);
@@ -41,7 +41,7 @@ process.on('SIGINT', function () {
         console.log('Mongoose default connection disconnected through app termination');
         process.exit(0);
     });
-});-->
+});
 
 
 Conteúdo:
