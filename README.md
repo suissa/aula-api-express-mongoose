@@ -1,9 +1,11 @@
 # Diário de bordo da nave estelar USS Enterprise
 
-# Data estelar 140507.X - Houston, we have a problem!
+# Data estelar 140507.07:00
 
-Node.js, MongooDb e Express. 
-Houston estamos com um problema no CRUD!!
+## Houston, we have a problem!
+
+### Node.js, MongooDb e Express. 
+### Houston estamos com um problema no CRUD!!
 
 Para o "MEU PROCESSO DE APRENDIZAGEM", preciso entender lógicamente o que cada linha faz, como se estivesse conversando com o computador e falando na linguagem do interpretador, do mesmo jeito que estivesse falando com um Americano, ou com um Chinês. Tenho que saber o teor de nossa conversa, linha por linha. 
 
@@ -128,3 +130,8 @@ process.on('SIGINT', function () {
 Vou tentar "traduzir" esse bloco inteiro: O processo do Node está funcionando, mas quando ele terminar, o mongoose vai fechar a conexão com a base de dados. Realizado isso mostrará um log no console informando que "A conexão default do mongoose foi terminada (ou encerrada)atraves da finalização do aplicativo". Com isso o aplicativo é "jogado" para fora e termina todo o processo.
 
 SIGINT (acrônimo de signals intelligence) é o termo inglês usado para descrever a atividade da coleta de informações ou inteligência através da interceptação de sinais de comunicação entre pessoas ou máquinas
+
+### Pasta fields
+
+Contém 3 arquivo fields-create_id.js, fields_idade.js e fields_nome.js.
+
