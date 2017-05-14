@@ -2,13 +2,20 @@
 
 # Data estelar 140507.X - Houston, we have a problem!
 
-Sistema com Node.js, MongooDb e Express. Houston estamos com um problema no CRUD!!
+Node.js, MongooDb e Express. 
+Houston estamos com um problema no CRUD!!
 
-Primeiramente criamos 2 pastas, db e fields e 2 arquivos dentro da pasta routes, model.js e user.js, que explicaremos a seguir. 
+Para o "MEU PROCESSO DE APRENDIZAGEM", preciso entender lógicamente o que cada linha faz, como se estivesse conversando com o computador e falando na linguagem do interpretador, do mesmo jeito que estivesse falando com um Americano, ou com um Chinês. Tenho que saber o teor de nossa conversa, linha por linha. 
 
-Módulos:
+O exemplo que criamos foi uma conexão básica, e estamos desenvolvendo um CRUD "CRUD é o acrônimo da expressão do idioma Inglës, Create (Criação), Retrieve (Consulta), Update (Atualização) e Delete (Destruição). Este acrônimo é comumente utilizado para definir as quatro operações básicas usadas em Banco de Dados."
+
+Com base nestas informações criamos, no projeto, 2 pastas, db e fields e 2 arquivos dentro da pasta routes, model.js e user.js, que explicaremos o passo-a-passo a seguir. 
+
+````
+Definição dos módulos utilizados:
 mongoose (modelagem elegante para objetos em MongoDb para NodeJs)
 Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+````
 
 ### Pasta db
 
@@ -84,13 +91,18 @@ Método mongoose.connection.on, se foi feita uma conexão e a resposta for "erro
     console.log('Mongoose default connection error ' + err);
 });
 ````
-Mostrará no console um log com a seguinte informação: "Houve um erro com a conexão default do Mongoose" e informará o tipo do erro ex.: Mongoose default connection error MongoError: Authentication failed. (erro de autenticação)
+Mostrará no console um log com a seguinte informação: "Houve um erro com a conexão default do Mongoose" e informará o tipo do erro ex.: Mongoose default connection error MongoError: Authentication failed. (erro de autenticação).
 
+````js
 mongoose.connection.on('disconnected', function () {
+````
+Método mongoose.connection.on, como dissemos anteriormente o método fica "escutando" a conexão se o retorno for "disconnected", quer dizer que a conexão foi desconectada e o sistema entrará no laço e fará a próxima ação.
+
+````js
     console.log('Mongoose default connection disconnected ');
 });
-
-mongoose.connection.on('open', function () {
+````
+Mostrará no console um log com a seguinte informação: "A conexão defaul com o Mongoose foi desconectada"..connection.on('open', function () {
     console.log('Mongoose default connection is open ');
 });
 
