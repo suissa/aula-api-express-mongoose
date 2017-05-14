@@ -14,7 +14,9 @@ Com base nestas informações criamos, no projeto, 2 pastas, db e fields e 2 arq
 ````
 Definição dos módulos utilizados:
 mongoose (modelagem elegante para objetos em MongoDb para NodeJs)
-Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+Mongoose provides a straight-forward, schema-based solution to model your application data.
+It includes built-in type casting, validation, query building, business logic hooks and 
+more, out of the box.
 ````
 
 ### Pasta db
