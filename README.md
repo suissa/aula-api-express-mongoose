@@ -104,9 +104,19 @@ Método mongoose.connection.on, como dissemos anteriormente o método fica "escu
     console.log('Mongoose default connection disconnected ');
 });
 ````
-Mostrará no console um log com a seguinte informação: "A conexão defaul com o Mongoose foi desconectada"..connection.on('open', function () {
+Mostrará no console um log com a seguinte informação: "A conexão defaul com o Mongoose foi desconectada".
+
+````js
+mongoose.connection.on('open', function () {
+````
+Método mongoose.connection.on, aqui alêm de fazer a conexão, o sistema pergunta  ao mongoose se essa mesma conexão foi aberta com a base de dados. se o resultado, que por padrão e "True" ele irá entrar no laço e fazer a próxima linha do código.
+
+````js
     console.log('Mongoose default connection is open ');
-});
+    });
+````
+Mostrará no console um log com a seguinte informação: "A conexão defaul com o Mongoose foi aberta".
+
 
 process.on('SIGINT', function () {
     mongoose.connection.close(function () {
