@@ -14,7 +14,7 @@ Mongoose provides a straight-forward, schema-based solution to model your applic
 
 Arquivo config.js
 
-
+```js
 const mongoose = require('mongoose');
 const dbUrl = 'mongodb://henriqueferraz:lai7452@ds127101.mlab.com:27101/ofnet';
 
@@ -42,7 +42,7 @@ process.on('SIGINT', function () {
         process.exit(0);
     });
 });
-
+```
 
 Conteúdo:
 const mongoose = require('mongoose');
