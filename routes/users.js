@@ -8,8 +8,16 @@ const Model = require('./model')
 
 router.post('/:', (req, res, next) => {
   // Listagem com Model.create()
-  const data = req.body
-})
+  const data = new Model(req.body);
+  data.save(function (err, post) {
+    if (err) {
+      return next(err);
+    } else {
+      res.json(post);
+    }
+  });
+});
+
 
 router.get('/', (req, res, next) => {
   // Listagem com Model.find()
