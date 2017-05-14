@@ -45,19 +45,27 @@ process.on('SIGINT', function () {
 ```
 
 Conteúdo:
+```js
 const mongoose = require('mongoose');
+````
 
 **** Criamos uma constante com o nome de mongoose e informamos que ela requer o módulo chamado de mongoose - Em tempo! Por quê criamos uma contante (const) e não uma variável (var)? - Essa resposta deixaremos para o essa pergunta deixaremos para o Imediato e Oficial da ciências Sr. SuissaSpock
 
+```js
 const dbUrl = 'mongodb://henriqueferraz:lai7452@ds127101.mlab.com:27101/ofnet';
+````
 
 **** Criamos uma constante com o nome de dbUrl e informamos sua variável vai utilizar uma conexão com o mongodb, passando o usuário, a senha e o endereço do serviço de provedoria e qual o nome da base para acesso.
 
+```js
 mongoose.connect(dbUrl);
+```
 
 **** Método mongoose.conect, informa ao mongoose que estamos querendo uma conexão, passamos também a variável dbUrl (que passamos acima), ela informa em que modelo de base de dados, que aqui é o mongodb e passa também as configurações de conexão.
 
+```js
 mongoose.connection.on('connected', function () {
+````
     
 **** Método mongoose.connection.on, solicita se foi feita uma conexão, se a resposta for "connected", isso quer dizer que a conexão foi bem sucedida, então o sistema entrará no laço e realizará a próxima instrução.
 
