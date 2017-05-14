@@ -49,32 +49,42 @@ Conteúdo:
 const mongoose = require('mongoose');
 ````
 
-**** Criamos uma constante com o nome de mongoose e informamos que ela requer o módulo chamado de mongoose - Em tempo! Por quê criamos uma contante (const) e não uma variável (var)? - Essa resposta deixaremos para o essa pergunta deixaremos para o Imediato e Oficial da ciências Sr. SuissaSpock
+Criamos uma constante com o nome de mongoose e informamos que ela requer o módulo chamado de mongoose - Em tempo! Por quê criamos uma contante (const) e não uma variável (var)? - Essa resposta deixaremos para o essa pergunta deixaremos para o Imediato e Oficial da ciências Sr. SuissaSpock
 
 ```js
 const dbUrl = 'mongodb://henriqueferraz:lai7452@ds127101.mlab.com:27101/ofnet';
 ````
 
-**** Criamos uma constante com o nome de dbUrl e informamos sua variável vai utilizar uma conexão com o mongodb, passando o usuário, a senha e o endereço do serviço de provedoria e qual o nome da base para acesso.
+Criamos uma constante com o nome de dbUrl e informamos sua variável vai utilizar uma conexão com o mongodb, passando o usuário, a senha e o endereço do serviço de provedoria e qual o nome da base para acesso.
 
 ```js
 mongoose.connect(dbUrl);
 ```
 
-**** Método mongoose.conect, informa ao mongoose que estamos querendo uma conexão, passamos também a variável dbUrl (que passamos acima), ela informa em que modelo de base de dados, que aqui é o mongodb e passa também as configurações de conexão.
+Método mongoose.conect, informa ao mongoose que estamos "escutando" a conexão do endereço passado pela variável dbUrl (que passamos acima).
 
 ```js
 mongoose.connection.on('connected', function () {
 ````
     
-**** Método mongoose.connection.on, solicita se foi feita uma conexão, se a resposta for "connected", isso quer dizer que a conexão foi bem sucedida, então o sistema entrará no laço e realizará a próxima instrução.
+Método mongoose.connection.on, se foi feita uma conexão e a resposta for "connected", isso quer dizer que a conexão foi bem sucedida, então o sistema entrará no laço e realizará a próxima instrução.
 
+````js
     console.log('Mongoose default connection open to ' + dbUrl);
 });
+````
+Mostrará no console um log com a seguinte informação: "Foi aberto uma conexão default com o Mongoose no endereço XYZ"
 
+````js
 mongoose.connection.on('error', function (err) {
+````
+Método mongoose.connection.on, se foi feita uma conexão e a resposta for "error", isso quer dizer que a houve um erro na conexão, então o sistema entrará no laço e realizará a próxima instrução, retornando na função qual o tipo de erro.
+
+````js
     console.log('Mongoose default connection error ' + err);
 });
+````
+Mostrará no console um log com a seguinte informação: "Houve um erro com a conexão default do Mongoose" e informará o tipo do erro ex.: Mongoose default connection error MongoError: Authentication failed. (erro de autenticação)
 
 mongoose.connection.on('disconnected', function () {
     console.log('Mongoose default connection disconnected ');
