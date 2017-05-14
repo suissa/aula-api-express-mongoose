@@ -1,1 +1,48 @@
-# aula-api-express-mongoose
+# Diário de bordo da nave estelar Enterprise
+
+# Data estelar 140507.X - Houston, we have a problem!
+
+Sistema com Node.js, MongooDb e Express. Houston estamos com um problema no CRUD!!
+
+Primeiramente criamos 2 pastas, db e fields e 2 arquivos dentro da pasta routes, model.js e user.js, que esplicaremos a seguir. 
+
+Módulos:
+mongoose (modelagem elegante para objetos em MongoDb para NodeJs)
+Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+
+### Pasta db
+
+Arquivo config.js
+
+Conteúdo:
+const mongoose = require('mongoose');
+// Criamos uma constante com o nome de mongoose e informamos que ela requer o módulo 
+// chamado de mongoose - Em tempo! Por quê criamos uma contante (const) e não uma variável
+// (var)? - Essa resposta deixaremos para o essa pergunta deixaremos para o Imediato e 
+// oficial da ciências Sr. SuissaSpock
+const dbUrl = 'mongodb://henriqueferraz:lai7452@ds127101.mlab.com:27101/ofnet';
+
+mongoose.connect(dbUrl);
+
+mongoose.connection.on('connected', function () {
+    console.log('Mongoose default connection open to ' + dbUrl);
+});
+
+mongoose.connection.on('error', function (err) {
+    console.log('Mongoose default connection error ' + err);
+});
+
+mongoose.connection.on('disconnected', function () {
+    console.log('Mongoose default connection disconnected ');
+});
+
+mongoose.connection.on('open', function () {
+    console.log('Mongoose default connection is open ');
+});
+
+process.on('SIGINT', function () {
+    mongoose.connection.close(function () {
+        console.log('Mongoose default connection disconnected through app termination');
+        process.exit(0);
+    });
+});
