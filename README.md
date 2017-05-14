@@ -16,10 +16,8 @@ Arquivo config.js
 
 Conteúdo:
 const mongoose = require('mongoose');
-// Criamos uma constante com o nome de mongoose e informamos que ela requer o módulo 
-// chamado de mongoose - Em tempo! Por quê criamos uma contante (const) e não uma variável
-// (var)? - Essa resposta deixaremos para o essa pergunta deixaremos para o Imediato e 
-// Oficial da ciências Sr. SuissaSpock
+
+**** Criamos uma constante com o nome de mongoose e informamos que ela requer o módulo chamado de mongoose - Em tempo! Por quê criamos uma contante (const) e não uma variável (var)? - Essa resposta deixaremos para o essa pergunta deixaremos para o Imediato e Oficial da ciências Sr. SuissaSpock
 
 const dbUrl = 'mongodb://henriqueferraz:lai7452@ds127101.mlab.com:27101/ofnet';
 // Criamos uma constante com o nome de dbUrl e informamos sua variável vai utilizar uma 
