@@ -109,7 +109,7 @@ Mostrará no console um log com a seguinte informação: "A conexão defaul com 
 ````js
 mongoose.connection.on('open', function () {
 ````
-Método mongoose.connection.on, aqui alêm de fazer a conexão, o sistema pergunta  ao mongoose se essa mesma conexão foi aberta com a base de dados. se o resultado, que por padrão e "True" ele irá entrar no laço e fazer a próxima linha do código.
+Método mongoose.connection.on, aqui alêm de fazer a conexão, o sistema pergunta  ao mongoose se essa mesma conexão foi aberta com a base de dados. Se o resultado, que por padrão e "True" ele irá entrar no laço e fazer a próxima linha do código.
 
 ````js
     console.log('Mongoose default connection is open ');
@@ -117,10 +117,14 @@ Método mongoose.connection.on, aqui alêm de fazer a conexão, o sistema pergun
 ````
 Mostrará no console um log com a seguinte informação: "A conexão defaul com o Mongoose foi aberta".
 
-
+````js
 process.on('SIGINT', function () {
     mongoose.connection.close(function () {
         console.log('Mongoose default connection disconnected through app termination');
         process.exit(0);
     });
 });
+````
+Vou tentar "traduzir" esse bloco inteiro: O processo do Node está funcionando, mas quando ele terminar, o mongoose vai fechar a conexão com a base de dados. Realizado isso mostrará um log no console informando que "A conexão default do mongoose foi terminada (ou encerrada)atraves da finalização do aplicativo". Com isso o aplicativo é "jogado" para fora e termina todo o processo.
+
+SIGINT (acrônimo de signals intelligence) é o termo inglês usado para descrever a atividade da coleta de informações ou inteligência através da interceptação de sinais de comunicação entre pessoas ou máquinas
