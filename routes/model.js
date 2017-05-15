@@ -5,7 +5,7 @@ const nome = require('./../fields/fields-nome');
 const idade = require('./../fields/fields-idade');
 const created_id = require('./../fields/fields-create_id');
 
-// Criação do Shema
+// Criação do Schema
 
 const _schema = {
         nome,

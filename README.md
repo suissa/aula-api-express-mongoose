@@ -135,3 +135,27 @@ SIGINT (acrônimo de signals intelligence) é o termo inglês usado para descrev
 
 Contém 3 arquivo fields-create_id.js, fields_idade.js e fields_nome.js.
 
+Um arquivo contendo os comandos de criação do banco (Schema) irá recuperar essas informações. (model.js)
+
+##Arquivo fields-create_id.js
+
+````js
+module.exports = { type: Date, default: Date.now}
+````
+Esse arquivo é utilizado para criar os campos da COLEÇÃO do MongoDb. Está informando que deve ser exportado esse módulo, com um campo do tipo data e contendo como default a data atual. 
+
+##Arquivo fields-idade.js
+
+````js
+module.exports = { type: Number }
+````
+Esse arquivo é utilizado para criar os campos da COLEÇÃO do MongoDb. Está informando que deve ser exportado esse módulo, com um campo do tipo Numérico. 
+
+##Arquivo fields-nome.js
+
+````js
+module.exports = { type: String }
+````
+Esse arquivo é utilizado para criar os campos da COLEÇÃO do MongoDb. Está informando que deve ser exportado esse módulo, com um campo do tipo String (infelizmente não sei a tradução correta). 
+
+
