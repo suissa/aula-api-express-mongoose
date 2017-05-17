@@ -194,3 +194,10 @@ const Schema = mongoose.Schema;
 
 Tudo no Mongoose começa com um Schema (Esquema). Cada schema mapeia para uma coleção do MongoDB e define a forma dos documentos dentro dessa coleção.
 Nesse comando estamos informando que a constante (ou Variável) Schema é do tipo mongoose.Schema.
+
+````js
+const nome = require('./../fields/fields-nome');
+const idade = require('./../fields/fields-idade');
+const created_id = require('./../fields/fields-create_id');
+````
+Cria-se as constantes nome, 
