@@ -4,10 +4,14 @@ extends layout
 block content
   div.container
     form.form-signin
-      h2.form-signin-heading= title
-      label.sr-only(for='inputEmail') Informe seu e-mail
-      input.form-control(type='email' id='inputEmail' placeholder='Email' required autofocus)
-      p Atenção..... #{title}
-      button.btn.btn-default(type="submit") Botão
-
-      
+      center
+        h2.form-signin-heading= title
+      p
+        input.form-control(type='email' id='inputEmail' placeholder='Informe seuEmail' required autofocus)
+      p
+        input.form-control(type='password' id='inputPassword' placeholder='Informe a senha' required)
+        p 
+        input(type='checkbox' value='remember-me')
+        span  Lembrar Senha
+      p
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Logar
