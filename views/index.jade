@@ -1,5 +1,13 @@
 extends layout
 
+
 block content
-  h1= title
-  p Bem vindo to #{title}
+  div.container
+    form.form-signin
+      h2.form-signin-heading= title
+      label.sr-only(for='inputEmail') Informe seu e-mail
+      input.form-control(type='email' id='inputEmail' placeholder='Email' required autofocus)
+      p Atenção..... #{title}
+      button.btn.btn-default(type="submit") Botão
+
+      
