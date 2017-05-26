@@ -16,5 +16,9 @@ body {
 }
 
 .btn-login {
+  background-color: #2980b9 !important;
+}
+
+.btn-senha {
   background-color: #34495e !important;
 }

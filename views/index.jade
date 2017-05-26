@@ -6,17 +6,11 @@ block content
     form.col-lg4.col-lg-offset-4.my_form
       img.center-block(src='image/henrique.jpg')
       h2.text-center= title
-      label.sr-only(for='inputEmail') Informe seu e-mail
-      |         
+      //Caixa de input do e-mail 
       input#inputEmail.form-control(type='email', placeholder='Informe seu e-mail', required='', autofocus='')
       p         
-      label.sr-only(for='inputPassword') Informe sua senha
-      |         
+      //Caixa de input da senha       
       input#inputPassword.form-control(type='password', placeholder='Informe sua senha', required='')
-      //Caixa de input do e-mail
-      .checkbox
-      label
-        input(type='checkbox', value='remember-me')
-        |  Remember me
-      |         
-      button.btn.btn-lg.btn-primary.btn-block.btn-login(type='submit') Sign in
+      p
+      button.btn.btn-lg.btn-primary.btn-block.btn-login(type='submit') Entrar
+      button.btn.btn-lg.btn-primary.btn-block.btn-senha(type='submit') Lembrar Senha
