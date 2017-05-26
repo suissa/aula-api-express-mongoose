@@ -1,48 +1,20 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee !important;
+  background-color: #3498bd !important;
 }
 
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+.my_form {
+  background-color: #fff;
+  margin-top: 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, .7);
+  display: table;
 }
 
-.form-signin .form-signin-heading {
-  margin-bottom: 10px;
-  font-weight: normal;
+.form-control {
+  padding: 2rem !important;
 }
 
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-footer {
-    width: 100%;
-    left: 40% !important;
+.btn-login {
+  background-color: #34495e !important;
 }
