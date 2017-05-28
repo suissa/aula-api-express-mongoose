@@ -1,8 +1,24 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #3498bd !important;
 }
 
-a {
-  color: #00B7FF;
+.my_form {
+  background-color: #fff;
+  margin-top: 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, .7);
+  display: table;
+}
+
+.form-control {
+  padding: 2rem !important;
+}
+
+.btn-login {
+  background-color: #2980b9 !important;
+}
+
+.btn-senha {
+  background-color: #34495e !important;
 }

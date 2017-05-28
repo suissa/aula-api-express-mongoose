@@ -1,5 +1,16 @@
 extends layout
 
+
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    form(class='col-lg4 col-lg-offset-4 my_form' action='/senha', method='get')
+      img.center-block(src='image/henrique.jpg')
+      h2.text-center= title
+      //Caixa de input do e-mail 
+      input#inputEmail.form-control(type='email', placeholder='Informe seu e-mail', required='', autofocus='')
+      p         
+      //Caixa de input da senha       
+      input#inputPassword.form-control(type='password', placeholder='Informe sua senha', required='')
+      p
+      button.btn.btn-lg.btn-primary.btn-block.btn-login(type='submit') Entrar
+      button.btn.btn-lg.btn-primary.btn-block.btn-senha(type='submit') Lembrar Senha
